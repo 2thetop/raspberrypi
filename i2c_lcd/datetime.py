@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # Original code found at:
 # https://gist.github.com/DenisFromHR/cc863375a6e19dce359d
-# IP_Script Developed by: AndyPi (http://andypi.co.uk/)
 # modified by zzeromin
 # requires I2C_LCD_driver.py
 
