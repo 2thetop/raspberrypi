@@ -5,7 +5,6 @@
 
 # requires I2C_LCD_driver.py
 
-from mpd import MPDClient
 import I2C_LCD_driver
 from sys import exit
 from time import *
@@ -25,16 +24,3 @@ mylcd = I2C_LCD_driver.lcd()
 mylcd.lcd_display_string("IP address:", 1)
 mylcd.lcd_display_string(ipaddr, 2)
 sleep(2) # 2 sec delay
-
-'''
-# String Display 1
-while True:
-    try:
-		mylcd.lcd_display_string("IP address:", 1)
-		mylcd.lcd_display_string(ipaddr, 2)
-		sleep(2) # 2 sec delay
-    except KeyboardInterrupt:
-        mylcd.backlight(0)
-        print
-        exit()
-'''
