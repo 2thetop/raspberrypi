@@ -60,5 +60,5 @@ while 1:
       print "CPU Temp: " + str( new_Temp )
       print "CPU Speed: " + str( new_Speed )
       mylcd.lcd_display_string( "CPU Temp: " + str( new_Temp ), 1 )
-      mylcd.lcd_display_string( "CPU Speed: " + str( round( get_cpu_speed() ) )$
+      mylcd.lcd_display_string( "CPU Speed: " + str( round( get_cpu_speed() ) ) )
       sleep(5)
