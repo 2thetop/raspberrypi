@@ -33,7 +33,7 @@ def get_cpu_speed():
 mylcd = I2C_LCD_driver.lcd()
 mylcd.lcd_clear()
 
-#get ip address of eth0 connection (use wlan0 for wireless)
+#get ip address of eth0 connection
 cmd = "ip addr show eth0 | grep 'inet ' | awk '{print $2}' | cut -d/ -f1"
 #get ip address of wlan0 connection
 #cmd = "ip addr show wlan0 | grep 'inet ' | awk '{print $2}' | cut -d/ -f1"
