@@ -2,6 +2,7 @@
 # Original code found at:
 # https://github.com/zzeromin/raspberrypi/tree/master/i2c_lcd
 # requires I2C_LCD_driver.py
+# register using systemd service => nano /usr/lib/systemd/system/welcome.service
 
 import I2C_LCD_driver
 from time import *
