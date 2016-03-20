@@ -49,7 +49,7 @@ while 1:
        #print datetime.now().strftime( "%b %d  %H:%M:%S" )
        #print "IP " + str( ipaddr )
        mylcd.lcd_display_string( datetime.now().strftime( "%b %d  %H:%M:%S" ), 1 )
-       mylcd.lcd_display_string( "IP  %s" %(ipaddr), 2 )
+       mylcd.lcd_display_string( "IP %s" %(ipaddr), 2 )
        sec = sec + 1
        sleep(1)
 
