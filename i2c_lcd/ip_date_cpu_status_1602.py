@@ -51,8 +51,8 @@ while 1:
    sleep(5)
 
    # cpu Temp & Speed information
-   new_Temp = get_cpu_temp()
-   new_Speed = get_cpu_speed()
+   new_Temp = int( round( get_cpu_temp() ) )
+   new_Speed = int( get_cpu_speed() )
 
    if old_Temp != new_Temp or old_Speed != new_Speed :
       old_Temp = new_Temp
@@ -60,5 +60,5 @@ while 1:
       print "CPU Temp: " + str( new_Temp )
       print "CPU Speed: " + str( new_Speed )
       mylcd.lcd_display_string( "CPU Temp: " + str( new_Temp ), 1 )
-      mylcd.lcd_display_string( "CPU Speed: " + str( round( get_cpu_speed() ) ) )
+      mylcd.lcd_display_string( "CPU Speed: " + str( new_Speed ), 2 )
       sleep(5)
