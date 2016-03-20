@@ -42,25 +42,28 @@ old_Temp = new_Temp = get_cpu_temp()
 old_Speed = new_Speed = get_cpu_speed()
 
 while 1:
+   sec = 0
    while ( sec<4 ) :
-	   # ip & date information
-	   ipaddr = run_cmd(cmd)
-	   print datetime.now().strftime( "%b %d  %H:%M:%S" )
-	   print "IP " + str( ipaddr )
-	   mylcd.lcd_display_string( datetime.now().strftime( "%b %d  %H:%M:%S" ), 1 )
-	   mylcd.lcd_display_string( "IP  %s" %(ipaddr), 2 )
-       sec++;
-	   sleep(1)
+       # ip & date information
+       ipaddr = run_cmd(cmd)
+       #print datetime.now().strftime( "%b %d  %H:%M:%S" )
+       #print "IP " + str( ipaddr )
+       mylcd.lcd_display_string( datetime.now().strftime( "%b %d  %H:%M:%S" ), 1 )
+       mylcd.lcd_display_string( "IP  %s" %(ipaddr), 2 )
+       sec = sec + 1
+       sleep(1)
+
+   mylcd.lcd_clear()
 
    # cpu Temp & Speed information
    new_Temp = get_cpu_temp()
-   new_Speed = get_cpu_speed()
+   new_Speed = int( get_cpu_speed() )
 
    if old_Temp != new_Temp or old_Speed != new_Speed :
       old_Temp = new_Temp
       old_Speed = new_Speed
-      print "CPU Temp: " + str( new_Temp )
-      print "CPU Speed: " + str( new_Speed )
+      #print "CPU Temp: " + str( new_Temp )
+      #print "CPU Speed: " + str( new_Speed )
       mylcd.lcd_display_string( "CPU Temp: " + str( new_Temp ), 1 )
       mylcd.lcd_display_string( "CPU Speed: " + str( new_Speed ), 2 )
-      sleep(5)
+      sleep(3)
