@@ -8,6 +8,6 @@ import I2C_LCD_driver
 from time import *
 
 mylcd = I2C_LCD_driver.lcd()
-mylcd.lcd_display_string("   RAS Hi-Pi", 1)
+mylcd.lcd_display_string("    RAS Hi-Pi", 1)
 mylcd.lcd_display_string("www.rasplay.org", 2)
 sleep(2) # 2 sec delay
