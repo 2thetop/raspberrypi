@@ -18,11 +18,12 @@ while 1:
        system = f.readline()
        system = system.replace("\n","")
        systemMap = {
-          "gba":"Game Boy Advance",
+          "gba":"GameBoy Advance",
           "mame-libretro":"MAME",
           "msx":"MSX",
           "fba":"FinalBurn Alpha",
-          "nes":"Nintendo Entertainment System"
+          "nes":"Nintendo NES",
+          "snes":"Super Nintendo",
        }
        system = systemMap.get(system)
 
