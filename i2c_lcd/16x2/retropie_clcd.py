@@ -55,6 +55,7 @@ while 1:
    while ( sec < 5 ) :
       # ip & date information
       ipaddr = run_cmd(cmd)
+      ipaddr = ipaddr.replace("\n","")
       #print datetime.now().strftime( "%b %d  %H:%M:%S" )
       #print "IP " + str( ipaddr )
       mylcd.lcd_display_string( datetime.now().strftime( "%b %d  %H:%M:%S" ), 1 )
