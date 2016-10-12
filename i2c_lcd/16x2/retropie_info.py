@@ -13,29 +13,36 @@ mylcd.lcd_clear()
 while 1:
    sec = 0
    while ( sec < 5 ) :
-       f = open('/dev/shm/runcommand.log', 'r')
+      # show system & rom file information
 
-       system = f.readline()
-       system = system.replace("\n","")
-       systemMap = {
-          "gba":"GameBoy Advance",
-          "mame-libretro":"MAME",
-          "msx":"MSX",
-          "fba":"FinalBurn Alpha",
-          "nes":"Nintendo NES",
-          "snes":"Super Nintendo",
-       }
-       system = systemMap.get(system)
+      try:
+         f = open('/dev/shm/runcommand.log', 'r')
+#      except FileNotFoundError:
+      except IOError:
+         mylcd.lcd_display_string( "nothing to show", 1 )
+         sleep(3)
+         break
+         pass
+      else:
+         system = f.readline()
+         system = system.replace("\n","")
+         systemMap = {
+            "gba":"GameBoy Advance",
+            "mame-libretro":"MAME",
+            "msx":"MSX",
+            "fba":"FinalBurn Alpha",
+            "nes":"Nintendo NES",
+            "snes":"Super Nintendo",
+         }
+         system = systemMap.get(system)
 
-       rom = f.readline()
-       rom = rom.replace("\n","")
+         rom = f.readline()
+         rom = rom.replace("\n","")
 
-       f.close()
-       
-       # show system & rom file information
-       mylcd.lcd_display_string( "%s" %(system), 1 )
-       mylcd.lcd_display_string( "%s" %(rom), 2 )
-       sec = sec + 1
-       sleep(1)
+         f.close()
 
-   mylcd.lcd_clear()
+         mylcd.lcd_display_string( "%s" %(system), 1 )
+         mylcd.lcd_display_string( "%s" %(rom), 2 )
+         sec = sec + 1
+         sleep(1)
+         
