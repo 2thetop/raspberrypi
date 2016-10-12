@@ -19,7 +19,8 @@ while 1:
          f = open('/dev/shm/runcommand.log', 'r')
 #      except FileNotFoundError:
       except IOError:
-         mylcd.lcd_display_string( "nothing to show", 1 )
+         mylcd.lcd_display_string( "You should play", 1 )
+         mylcd.lcd_display_string( "a game first!!", 2 )
          sleep(3)
          break
          pass
