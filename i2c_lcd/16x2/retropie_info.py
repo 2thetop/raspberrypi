@@ -3,6 +3,11 @@
 # written by zzeromin, member of Raspberrypi Village
 # http://www.rasplay.org, http://forums.rasplay.org/
 # requires I2C_LCD_driver.py
+#
+#    Small script written in Python for Retropie project (https://retropie.org.uk/) 
+#    running on Raspberry Pi 2,3, upper Retropie V4.0.2, which displays all neccessary info on a 16x2 LCD display
+#    Features
+#    - Emulation amd ROM information
 
 import I2C_LCD_driver
 from time import *
