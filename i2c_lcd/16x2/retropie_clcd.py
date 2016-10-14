@@ -104,6 +104,7 @@ while 1:
             "fba":"FinalBurn Alpha",
             "nes":"Nintendo NES",
             "snes":"Super Nintendo",
+            "notice":"TURN OFF",
          }
          system = systemMap.get(system)
 
