@@ -42,9 +42,9 @@ mylcd = I2C_LCD_driver.lcd()
 mylcd.lcd_clear()
 
 #get ip address of eth0 connection
-cmd = "ip addr show eth0 | grep 'inet ' | awk '{print $2}' | cut -d/ -f1"
+cmdeth = "ip addr show eth0 | grep 'inet ' | awk '{print $2}' | cut -d/ -f1"
 #get ip address of wlan0 connection
-#cmd = "ip addr show wlan0 | grep 'inet ' | awk '{print $2}' | cut -d/ -f1"
+cmd = "ip addr show wlan0 | grep 'inet ' | awk '{print $2}' | cut -d/ -f1"
 
 old_Temp = new_Temp = get_cpu_temp()
 old_Speed = new_Speed = get_cpu_speed()
@@ -55,6 +55,12 @@ while 1:
    while ( sec < 5 ) :
       # ip & date information
       ipaddr = run_cmd(cmd)
+      
+      # selection of wlan or eth address 
+      count = len(ipaddr)
+      if count == 0 :
+         ipaddr = run_cmd(cmdeth)
+         
       ipaddr = ipaddr.replace("\n","")
       #print datetime.now().strftime( "%b %d  %H:%M:%S" )
       #print "IP " + str( ipaddr )
