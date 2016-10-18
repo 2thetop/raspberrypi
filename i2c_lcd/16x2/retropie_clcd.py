@@ -122,8 +122,8 @@ while 1:
             "mame-libretro":"MAME",
             "msx":"MSX",
             "fba":"FinalBurn Alpha",
-            "nes":"Nintendo NES",
-            "snes":"Super Nintendo",
+            "nes":"Famicom",   # Nintendo Entertainment System
+            "snes":"Super Famicom", # Super Nintendo Entertainment System
             "notice":"TURN OFF",
          }
          system = systemMap.get(system)
