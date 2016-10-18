@@ -54,7 +54,6 @@ def get_cpu_speed():
 mylcd = I2C_LCD_driver.lcd()
 mylcd.lcd_clear()
 
-
 #get ip address of eth0 connection
 cmdeth = "ip addr show eth0 | grep 'inet ' | awk '{print $2}' | cut -d/ -f1"
 #get ip address of wlan0 connection
@@ -69,6 +68,7 @@ mylcd.lcd_display_string("www.rasplay.org", 2, 1)
 sleep(5) # 5 sec delay
 
 while 1:
+   
    mylcd.lcd_clear()
    sec = 0
    while ( sec < 5 ) :
@@ -145,7 +145,6 @@ while 1:
 
          # Create scroller instance:
          scroller = Scroller(lines=lines)
-
 
          while True :
             if wait < 10 :
