@@ -14,7 +14,7 @@ IP_Script Developed by: AndyPi ( http://andypi.co.uk/ )
 lcdScroll Developed by: Eric Pavey ( https://bitbucket.org/AK_Eric/my-pi-projects/src/28302f8f5657599e29cb5d55573d192b9fa30265/Adafruit_CharLCDPlate/lcdScroll.py?at=master&fileviewer=file-view-default )
 
 #Notice:
-retropie_clcd.py requires I2C_LCD_driver.py, lcdScroll.py
+retropie_clcd.py require I2C_LCD_driver.py, lcdScroll.py
 
 Small script written in Python for Retropie project (https://retropie.org.uk/) 
 running on Raspberry Pi 2,3, which displays all neccessary info on a 16x2 LCD display
