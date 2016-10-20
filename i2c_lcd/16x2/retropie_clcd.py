@@ -4,7 +4,7 @@ retropie_clcd.py
 Author       : zzeromin, member of Raspberrypi Village
 Creation Date: Oct 11, 2016
 Blog         : http://rasplay.org, http://forums.rasplay.org/, https://zzeromin.tumblr.com/
-Thanks to     : smyani, zerocool
+Thanks to    : smyani, zerocool, GreatKStar
 
 Free and open for all to use. But put credit where credit is due.
 
