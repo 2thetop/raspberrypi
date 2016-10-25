@@ -123,11 +123,17 @@ while 1:
          system = f.readline()
          system = system.replace("\n","")
          systemMap = {
-            "gba":"GameBoy Advance",
-            "mame-libretro":"MAME",
-            "msx":"MSX",
             "fba":"FinalBurn Alpha",
+	         "gba":"GameBoy Advance",
+	         "kodi":"KODI",
+            "mame-mame4all":"MAME4ALL",
+            "mame-advmame":"AdvanceMAME",
+            "mame-libretro":"lr-MAME",
+            "msx":"MSX",
             "nes":"Famicom",   # Nintendo Entertainment System
+            "psp":"PSPortable",    # PlayStation Portable
+            "psx":"Playstation",
+            "ports":"Ports",
             "snes":"Super Famicom", # Super Nintendo Entertainment System
             "notice":"TURN OFF",
          }
