@@ -124,8 +124,8 @@ while 1:
          system = system.replace("\n","")
          systemMap = {
             "fba":"FinalBurn Alpha",
-	         "gba":"GameBoy Advance",
-	         "kodi":"KODI",
+            "gba":"GameBoy Advance",
+            "kodi":"KODI",
             "mame-mame4all":"MAME4ALL",
             "mame-advmame":"AdvanceMAME",
             "mame-libretro":"lr-MAME",
